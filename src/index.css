@@ -1,18 +1,68 @@
-body {
+/*body {*/
+/*  margin: 0;*/
+/*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
+/*    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+/*    sans-serif;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+
+/*code {*/
+/*  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
+/*  monospace;*/
+/*}*/
+
+/* Border box declaration
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+
+/* inherit border-box on all elements in the universe and before and after
+   */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body, html {
+  overflow: hidden;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
-}
-
-html, body, #root {
   height: 100vh;
   width: 100%;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
+
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  width: 10px;
+  height: 10px;
+}
+
+body ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, .25);
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+body ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .1);
+  border-radius: 0;
+}
+
+::selection {
+  background-color: #cce2ff;
+  color: rgba(0, 0, 0, .87);
+}
+
+.noselect {
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
